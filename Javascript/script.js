@@ -35,7 +35,7 @@ alert(a != b);
 
 //for (xDia = 0; xDia < 7; xDia ++)
 //{
-    
+
 //hoje = new Date();
 //diaSemana = new Array(7);
 //diaSemana[0] = "Frango Frito";
@@ -62,10 +62,70 @@ alert(a != b);
 //}
 
 
-a= 5;
-alert(++a +2);
-alert("a=" + a);
+//a= 5;
+//alert(++a +2);
+//alert("a=" + a);
 
-a=5;
-alert(a++ + 2);
-alert("a="+ a);
+//a=5;
+//alert(a++ + 2);
+//alert("a="+ a);
+
+//a = 5
+//b = --a +2;
+//document.write("a=" +a);
+//document.write("b="+b);
+
+//document.write("<p><b>" + "Usando o método toUpperCase" + "</p></b>");
+//A = new String("Olá Pessoal");
+//b = new String("Sejam benvindos ao JavaScript");
+//document.write(A.toUpperCase());
+//document.write(b.toUpperCase());
+//document.write("<p><b>" + "Você poderá usar:" + "</p></b>");
+//document.write("<p>" + A.toUpperCase() + b.toUpperCase() + "</p>");
+//document.write("<p><b>" + "Usando o método toLowerCase" + "</p></b>");
+
+//document.write(A.toLowerCase());
+//document.write(b.toLowerCase());
+//document.write("<p><b>" + "Você poderá usar:" + "</p></b>");
+//document.write("<p>" + A.toLowerCase() + b.toLowerCase() + "</p>");
+
+function imc(){
+const nome =document.getElementById('nome').value;
+const altura =document.getElementById('altura').value;
+const peso =document.getElementById('peso').value;
+const resultado =document.getElementById('resultado').value;
+
+if (nome !== '' && altura !== '' && peso !== ''){
+
+    const valorIMC = (peso / (altura * altura)).toFixed(1);
+
+    let classificacao = '';
+
+    if (valorIMC <18.5){
+        classificacao = 'abaixo do peso.';
+    }else if (valorIMC <25){
+       classificacao = 'com peso ideal. Parabéns!!'; 
+    }else if (valorIMC <30){
+        classificacao = 'Levemente a cima do peso';
+    }else if (valorIMC <35){
+        classificacao = 'Obesidade grau I';
+    }else if (valorIMC <40){
+        classificacao = 'Obesidade grau II';
+    }else{
+        classificacao = 'Obesidade grau III. Cuidado!!';
+}
+      
+     resultado.textContent = '${nome} seu IMC é $ {valorIMC} e você está %{clasificacao}'
+
+} else {
+    resultado.textContent = 'Preencha todos os campos!!';
+    
+}
+
+
+
+
+}
+
+
+
